@@ -47,7 +47,7 @@ def loopEachWord(dict):
 
             totalClicks += clicks
 
-        totalClicksResults[word] = totalClicks + len(word)
+        totalClicksResults[word] = int(totalClicks + len(word))
 
     print("[+] Finished calculating")
     return totalClicksResults
