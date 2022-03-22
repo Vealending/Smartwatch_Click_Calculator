@@ -56,8 +56,7 @@ def loadDict(dictFile):
 
     print("[+] Reading", dictFile)
 
-    with open(dictFile) as jsonFile:
-        dict = json.load(jsonFile)
+    dict = open(dictFile).read().split()
 
     print("[+] Loaded dictionary has", len(dict), "words")
     return dict
@@ -76,7 +75,7 @@ def writeCSVFile(fileName, dict):
 
 def main():
 
-    dict = loadDict("dictionary.json")
+    dict = loadDict("dictionary.txt")
 
     totalClicksResults = loopEachWord(dict)
 
